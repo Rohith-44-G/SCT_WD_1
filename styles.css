@@ -1,0 +1,85 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  scroll-behavior: smooth;
+}
+
+/* Section Layout */
+.section {
+  height: 100vh;
+  padding: 100px 40px 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Individual Backgrounds & Text Colors */
+.home {
+  background-color: #eafff5;  /* pale mint */
+  color: #004d40;             /* deep teal */
+}
+
+
+.about {
+  background-color: #fdf6e3;  /* light cream */
+  color: #333333;
+}
+
+.services {
+  background-color: #e0e0e0;  /* light gray */
+  color: #1a237e;             /* dark blue */
+}
+
+.contact {
+  background-color: #e6f2ff;  /* light blue */
+  color: #0d1117;             /* dark navy */
+}
+
+/* Fixed Navbar */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.85);  /* always dark */
+  padding: 15px 30px;
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.navbar.scrolled {
+  box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+}
+
+.nav-menu {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+
+.nav-menu a {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 18px;
+  padding: 8px 12px;
+  border-radius: 4px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.nav-menu a:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  color: #ffffff;
+}
+
+.nav-menu a.active {
+  background-color: #ffffff;
+  color: #333333;
+  font-weight: 700;
+}
